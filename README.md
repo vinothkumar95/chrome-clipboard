@@ -19,7 +19,7 @@ A modern Chrome extension that tracks and stores the last 10 copied texts (clipb
 1. Clone or download this repository:
 
    ```bash
-   git clone https://github.com/your-username/kolam-cbh.git
+   git clone https://github.com/vinothkumar95/chrome-clipboard.git
    ````
 
 2. Open Google Chrome and go to:
