@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clipboard History</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #f9f9f9;
+      padding: 16px;
+      margin: 0;
+      width: 320px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .history-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .clipboard-item {
+      background: white;
+      padding: 12px 14px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      font-size: 14px;
+      color: #333;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.2s ease;
+    }
+
+    .clipboard-item:hover {
+      background: #eef2ff;
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    .empty {
+      color: #999;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+    <h3>
+        <svg style="width:18px;height:18px;vertical-align:middle;margin-right:6px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 2h6a2 2 0 012 2v2H7V4a2 2 0 012-2zM7 6h10v14a2 2 0 01-2 2H9a2 2 0 01-2-2V6z" />
+        </svg>
+        Clipboard History
+      </h3>  <div class="history-container" id="historyContainer">
+    <p class="empty">No copied text yet.</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

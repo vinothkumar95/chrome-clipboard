@@ -1,0 +1,43 @@
+{
+    "version": "1",
+    "author": "Vinoth kumar",
+    "name": "Kolam CBH",
+    "description": "Tracks last 10 copied texts.",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "manifest_version": 3,
+    "action": {
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      },
+      "default_popup": "popup.html"
+    },
+    "background": { "service_worker": "background.js" },
+    "content_scripts": [
+        {
+          "matches": [ "http://*/*", "https://*/*"],
+          "js": ["content.js"],
+          "run_at": "document_idle",
+          "all_frames": true
+        }
+      ],
+    "permissions": [
+      "storage",
+      "offscreen",
+      "clipboardRead",
+      "clipboardWrite",
+      "unlimitedStorage",
+      "contextMenus",
+      "scripting",
+      "activeTab"
+    ],
+    "host_permissions": ["http://localhost/*", "*://*/*"]
+  }
+  
